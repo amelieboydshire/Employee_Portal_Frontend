@@ -3,6 +3,7 @@ import LoginForm from "./components/LoginForm";
 import { useState } from "react";
 import PortalContainer from "./containers/PortalContainer";
 import {BrowserRouter, Routes, Route, NavLink} from 'react-router-dom';
+import ProfilePage from "./components/ProfilePage";
 
 
 function App() {
@@ -43,6 +44,7 @@ function App() {
     <Routes>
       <Route path ="/" element={<LoginForm setEmployeeLogin={setEmployeeLogin}/>} />
       <Route path="/portal" element={<PortalContainer theme={theme} toggleTheme={toggleTheme} loggedInEmployee={loggedInEmployee} updateShifts={updateShifts}/>} />
+      <Route path="/profile" element={<ProfilePage loggedInEmployee={loggedInEmployee} />} />
     </Routes>
     </BrowserRouter>
     </div>
